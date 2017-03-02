@@ -14,11 +14,16 @@ namespace Bevzuk_ColorConverter
         public byte s; //saturation 0-100
         public byte v; //value 0-100
 
+        public int sRreal;
+        public int vRreal;
+
         public HSVcolor(ushort _h, byte _s, byte _v)
         {
             h = _h;
             s = _s;
             v = _v;
+            sRreal = s;
+            vRreal = v;
         }
     }
     public class ColorConvert

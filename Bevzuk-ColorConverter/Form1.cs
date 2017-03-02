@@ -16,7 +16,7 @@ namespace Bevzuk_ColorConverter
         ColorConvert cc = new ColorConvert();
         Stack<ICommand> CommandStack = new Stack<ICommand>();
         private bool HalfMod = false;
-        public Form1()
+        public Form1() 
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace Bevzuk_ColorConverter
         {
             string imagePath;
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "image files|*.jpeg;*.png";
+            dialog.Filter = "image files|*.jpg;*.jpeg;*.png";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 imagePath = dialog.FileName;

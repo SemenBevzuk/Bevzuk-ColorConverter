@@ -99,13 +99,15 @@ namespace Bevzuk_ColorConverter
             for(int i = 0; i<width; ++i)
                 for (int j = 0; j < height; ++j)
                 {
-                    int tmpV = cc.hsvImage[i, j].v + delta;
-                    if (tmpV < 0)
+                    //int tmpV = cc.hsvImage[i, j].v + delta;
+                    cc.hsvImage[i, j].vRreal = cc.hsvImage[i, j].vRreal + delta;
+
+                    if (cc.hsvImage[i, j].vRreal < 0)
                         cc.hsvImage[i, j].v = 0;
-                    else if(tmpV >= 100)
+                    else if(cc.hsvImage[i, j].vRreal >= 100)
                          cc.hsvImage[i, j].v = 100;
                     else
-                         cc.hsvImage[i, j].v = (byte) (tmpV);
+                         cc.hsvImage[i, j].v = (byte) ( cc.hsvImage[i, j].vRreal);
                 }
             cc.ConvertHSVimagetoRGB();
         }
@@ -136,13 +138,15 @@ namespace Bevzuk_ColorConverter
             for(int i = (int)(0.5*width); i<width; ++i)
                 for (int j = 0; j < height; ++j)
                 {
-                    int tmpV = cc.hsvImage[i, j].v + delta;
-                    if (tmpV < 0)
+                   //int tmpV = cc.hsvImage[i, j].v + delta;
+                    cc.hsvImage[i, j].vRreal = cc.hsvImage[i, j].vRreal + delta;
+
+                    if (cc.hsvImage[i, j].vRreal < 0)
                         cc.hsvImage[i, j].v = 0;
-                    else if(tmpV >= 100)
+                    else if(cc.hsvImage[i, j].vRreal >= 100)
                          cc.hsvImage[i, j].v = 100;
                     else
-                         cc.hsvImage[i, j].v = (byte) (tmpV);
+                         cc.hsvImage[i, j].v = (byte) ( cc.hsvImage[i, j].vRreal);
                 }
             cc.ConvertHSVimagetoRGB();
         }
@@ -165,13 +169,15 @@ namespace Bevzuk_ColorConverter
             for(int i = 0; i<width; ++i)
                 for (int j = 0; j < height; ++j)
                 {
-                    int tmpV = cc.hsvImage[i, j].s + delta;
-                    if (tmpV < 0)
+                    //int tmpV = cc.hsvImage[i, j].s + delta;
+                    cc.hsvImage[i, j].sRreal = cc.hsvImage[i, j].sRreal + delta;
+
+                    if (cc.hsvImage[i, j].sRreal < 0)
                         cc.hsvImage[i, j].s = 0;
-                    else if(tmpV >= 100)
+                    else if(cc.hsvImage[i, j].sRreal >= 100)
                          cc.hsvImage[i, j].s = 100;
                     else
-                         cc.hsvImage[i, j].s = (byte) (tmpV);
+                         cc.hsvImage[i, j].s = (byte) ( cc.hsvImage[i, j].sRreal);
                 }
             cc.ConvertHSVimagetoRGB();
         }
@@ -202,13 +208,15 @@ namespace Bevzuk_ColorConverter
             for(int i = (int)(0.5*width); i<width; ++i)
                 for (int j = 0; j < height; ++j)
                 {
-                    int tmpV = cc.hsvImage[i, j].s + delta;
-                    if (tmpV < 0)
+                    //int tmpV = cc.hsvImage[i, j].s + delta;
+                    cc.hsvImage[i, j].sRreal = cc.hsvImage[i, j].sRreal + delta;
+
+                    if (cc.hsvImage[i, j].sRreal < 0)
                         cc.hsvImage[i, j].s = 0;
-                    else if(tmpV >= 100)
+                    else if(cc.hsvImage[i, j].sRreal >= 100)
                          cc.hsvImage[i, j].s = 100;
                     else
-                         cc.hsvImage[i, j].s = (byte) (tmpV);
+                         cc.hsvImage[i, j].s = (byte) ( cc.hsvImage[i, j].sRreal);
                 }
             cc.ConvertHSVimagetoRGB();
         }
